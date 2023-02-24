@@ -8,9 +8,7 @@ import (
 //we make the entity structs implement the methods
 type entity interface{
 	entityInfo() string;
-	
 	transformPosition()(float64,float64);
-
 }
 
 //two types of entitites in a game
@@ -20,8 +18,8 @@ type player struct{
 	playerName string
 	xPosition float64;
 	yPosition float64;
-
 }
+
 
 type mob struct{
 	mobType string
@@ -43,9 +41,6 @@ func (p player) transformPosition () (float64,float64){
 	return p.xPosition + 10, p.yPosition - 4 ;
 
 }
- 
-
-
 
 func (m mob) entityInfo () string{
 	res := fmt.Sprintf("\nMob %s is located at X posion: %f, Y position: %f", m.mobType,m.xPosition,m.yPosition)
@@ -58,8 +53,6 @@ func (m mob) transformPosition () (float64,float64){
 	return m.xPosition + 13, m.yPosition +9 ;
 
 }
- 
-
 
 func printEntityInfo(e entity){
 	res := e.entityInfo()
@@ -67,7 +60,6 @@ func printEntityInfo(e entity){
 
 	x1,y1 := e.transformPosition()
 	fmt.Println("Entities new position :", x1,", ",y1)
-
 }
 
 

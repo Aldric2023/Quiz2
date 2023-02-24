@@ -20,7 +20,8 @@ func printrange (val int){
 
 func main(){
 	go printrange(4)
-	go printrange(9)
+
+	go printrange(6)
 
 	//if program finished befre the go routine then the go routine will also not run
 	

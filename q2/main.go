@@ -6,7 +6,6 @@ import (
 
 //channel allow us to send a recieve data from a go routine
 
-
 func incrementVal(val chan int, val2 int){
 	val <- val2 + 1
 
