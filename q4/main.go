@@ -28,6 +28,8 @@ func printrange (wg *sync.WaitGroup , val int){
 
 
 func main(){
+	
+	
 	//create a wait group
 	var wg sync.WaitGroup
 	wg.Add(2)

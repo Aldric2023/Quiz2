@@ -22,10 +22,10 @@ func main(){
 	go printrange(4)
 	go printrange(9)
 
-
 	//if program finished befre the go routine then the go routine will also not run
 	
 	//what we could do to preven this is sleep before the program.
 
+	time.Sleep(10 * time.Second)
 
 }

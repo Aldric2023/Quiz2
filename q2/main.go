@@ -12,7 +12,6 @@ func incrementVal(val chan int, val2 int){
 
 }
 
-
 func main(){
 	//create a channel
 	mychan := make(chan int)

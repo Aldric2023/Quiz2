@@ -8,6 +8,8 @@ import (
 //we make the entity structs implement the methods
 type entity interface{
 	entityInfo() string;
+	
+	transformPosition()(float64,float64);
 
 }
 
@@ -36,6 +38,16 @@ func (p player) entityInfo () string{
 	return res;
 
 }
+
+func (p player) transformPosition () (float64,float64){
+
+	
+	return int(p.xPosition + );
+
+}
+ 
+
+
 
 func (m mob) entityInfo () string{
 	res := fmt.Sprintf("Mob %s is located at X posion: %f, Y position: %f", m.mobType,m.xPosition,m.yPosition)
