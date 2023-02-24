@@ -33,16 +33,14 @@ type mob struct{
 //print the entyties location 
 func (p player) entityInfo () string{
 
-	res := fmt.Sprintf("Player %s is located at X posion: %f, Y position: %f \n", p.playerName,p.xPosition,p.yPosition)
+	res := fmt.Sprintf("Player %s is located at X posion: %f, Y position: %f ", p.playerName,p.xPosition,p.yPosition)
 	
 	return res;
 
 }
 
 func (p player) transformPosition () (float64,float64){
-
-	
-	return int(p.xPosition + );
+	return p.xPosition + 10, p.yPosition - 4 ;
 
 }
  
@@ -50,15 +48,26 @@ func (p player) transformPosition () (float64,float64){
 
 
 func (m mob) entityInfo () string{
-	res := fmt.Sprintf("Mob %s is located at X posion: %f, Y position: %f", m.mobType,m.xPosition,m.yPosition)
+	res := fmt.Sprintf("\nMob %s is located at X posion: %f, Y position: %f", m.mobType,m.xPosition,m.yPosition)
 	
 	return res;
 }
 
 
+func (m mob) transformPosition () (float64,float64){
+	return m.xPosition + 13, m.yPosition +9 ;
+
+}
+ 
+
+
 func printEntityInfo(e entity){
 	res := e.entityInfo()
 	fmt.Println(res)
+
+	x1,y1 := e.transformPosition()
+	fmt.Println("Entities new position :", x1,", ",y1)
+
 }
 
 
